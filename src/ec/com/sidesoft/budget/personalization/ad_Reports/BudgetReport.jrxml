@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.0.0.final using JasperReports Library version 6.0.0  -->
-<!-- 2019-07-03T18:41:41 -->
+<!-- 2019-07-10T08:10:47 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BudgetReport" pageWidth="1950" pageHeight="1161" orientation="Landscape" columnWidth="1940" leftMargin="5" rightMargin="5" topMargin="20" bottomMargin="20" uuid="6d629e19-6fd6-480d-b0bb-1f63b7d6b9f0">
 	<property name="ireport.zoom" value="1.331000000000001"/>
 	<property name="ireport.x" value="326"/>
@@ -408,8 +408,7 @@ budget.adjusted_budget,
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					</reportElement>
 					<textElement textAlignment="Center"/>
-					<textFieldExpression><![CDATA[$V{variable_pagrecuperadog2}
-]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$V{variable_pagrecuperadog2}]]></textFieldExpression>
 				</textField>
 				<textField pattern="###0.00">
 					<reportElement x="1464" y="15" width="138" height="20" uuid="02a41f8b-489e-4fe5-bf69-0e4227a30223">
@@ -421,8 +420,7 @@ budget.adjusted_budget,
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					</reportElement>
 					<textElement textAlignment="Center"/>
-					<textFieldExpression><![CDATA[$V{variable_saldocomprometidog2}
-]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$V{variable_saldocomprometidog2}]]></textFieldExpression>
 				</textField>
 				<textField pattern="###0.00">
 					<reportElement x="1600" y="15" width="138" height="20" uuid="cd314203-b17e-4719-bd81-e4b7b589da5c">
@@ -434,8 +432,7 @@ budget.adjusted_budget,
 						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					</reportElement>
 					<textElement textAlignment="Center"/>
-					<textFieldExpression><![CDATA[$V{variable_saldodebengadog2}
-]]></textFieldExpression>
+					<textFieldExpression><![CDATA[$V{variable_saldodebengadog2}]]></textFieldExpression>
 				</textField>
 				<textField pattern="###0.00">
 					<reportElement x="1740" y="15" width="158" height="20" uuid="15d4ebe0-de78-4759-99ea-97ed58d5d289">
@@ -598,7 +595,7 @@ budget.adjusted_budget,
 				<text><![CDATA[EJERCICIO:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement key="staticText" x="10" y="30" width="1890" height="20" uuid="23392e4e-2b4e-430a-a140-65539376cec6"/>
+				<reportElement key="staticText" x="-160" y="-40" width="1890" height="20" uuid="23392e4e-2b4e-430a-a140-65539376cec6"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14" isBold="true"/>
 				</textElement>
@@ -611,9 +608,35 @@ budget.adjusted_budget,
 				</textElement>
 				<text><![CDATA[DEL MES ENERO AL MES DICIEMBRE]]></text>
 			</staticText>
-			<textField>
-				<reportElement x="1800" y="3" width="100" height="20" uuid="908e0f8e-cc15-4265-b0ee-741c1e80d42e"/>
-				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			<textField pattern="HH:mm">
+				<reportElement x="1800" y="76" width="70" height="20" uuid="4837bfdc-e35a-49d6-be7a-e6b837dbcd4d">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="MMMMM dd, yyyy">
+				<reportElement x="1795" y="54" width="130" height="20" uuid="e4127dac-84c6-408c-b0fe-105c0f2a662d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="local_mesure_unity" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>
@@ -622,13 +645,28 @@ budget.adjusted_budget,
 			<property name="local_mesure_unitheight" value="pixel"/>
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField>
-				<reportElement x="1800" y="0" width="100" height="20" uuid="d7cda7e7-5749-4b6e-b827-1376832fd97a">
-					<property name="local_mesure_unitx" value="pixel"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				<reportElement x="1805" y="0" width="80" height="18" uuid="f79fd5cb-2bf4-49b5-af7d-995ebd5126d0">
 					<property name="local_mesure_unity" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
 				<textFieldExpression><![CDATA["Página " + $V{PAGE_NUMBER} + " de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="1870" y="0" width="39" height="18" uuid="f987e66a-f7a0-49a5-8c21-42e8faa94b3c">
+					<property name="local_mesure_unitx" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
